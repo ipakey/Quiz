@@ -8,10 +8,7 @@
     src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
     src: local('Material Icons'),
       local('MaterialIcons-Regular'),
-      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-  }
+ }
 
   .material-icons {
     font-family: 'Material Icons';
@@ -134,13 +131,11 @@ h2{
     box-shadow: 0 0.4rem 1.4rem 0 rgb(112, 106, 163);
 }
 
-.fa-crown{
-    font-size: 1.5rem;
-    margin-left: 1rem;
-}
 
 /* End Start Page css */
 
+
+/* Start End Page styling */
 
 .end-form-container{
     width: 100%;
@@ -177,10 +172,9 @@ input::placeholder{
 
 #saveScoreBtn{
     border: none;
+
 }
 
-.fa-home{
-    margin-left: 1rem;
-    font-size: 2rem;
-  
-}
+
+
+/* End End Page styling */

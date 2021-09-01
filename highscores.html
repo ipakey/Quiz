@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Home</title>
+    <title>High Scores</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    
-
+    <link rel="stylesheet" href="highscores.css">
 </head>
 <body>
     <div class="container">
-        <div id="home" class="flex-column flex-center">
-            <h1 class='justify-center'>Are you ready?</h1>
-            <a href="/Quiz/game.html" class='btn'>Play</a>
-            <a href="/Quiz/highscores.html" id='highScore-btn' class='btn'>High Scores 
-                <span class="material-icons">emoji_events</span>
-            </a>
+        <div id="highScores" class="flex-center flex-column">
+            <h1 id="finalScore" class='justify-center'>Leaderboard</h1>
+            <ul id="highScoresList"></ul>
+            <a href="/Quiz/" class="btn">Go Home
+                <span class="material-icons">home</span></a>
         </div>
     </div>
 </body>
+<script src="highscores.js"></script>
 </html>
