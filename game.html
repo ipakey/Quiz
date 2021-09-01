@@ -7,6 +7,7 @@
     <title>Quiz Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,7 @@
                 <div class="hud-id">
                     <div class="hud-item">
                         <p id="progressText" class="hud-prefix">
-                            Question
+                           Question
                         </p>
                         <div id="progressBar">
                             <div id="progressBarFull">
@@ -23,25 +24,18 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="hud-item">
-                        <p class="hud-prefix">
-                            Score
-                        </p>
-                        <h1 class="hud-main-text" id="score">
-                            0
-                        </h1>
-                        <div id="scoreBar">
-                            <div id="scoreBarFull">
-                                0
-                            </div>
-                        </div>
+                        <p  class="hud-prefix" >Score </p>
+                        <p class="hud-main-text" id="scoreText" >0</p>
+                        <div id="scoreBar"><div id="scoreBarFull">0</div></div>
                     </div>
                 </div>
 
             </div>
-            <div class='choice-container question' id="question">
-                <p class="choice-prefix question-text">Q</p>
-                <p class="question-text ">What is the answer to this question?</p>
+            <div class='question-container'>
+                <p class="question-prefix">Q</p>
+                <p class="question-text" id="question">What is the answer to this question?</p>
             </div>
             <div class="choice-container">
                 <p class="choice-prefix">A</p>

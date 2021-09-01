@@ -3,6 +3,7 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const scoreBarFull = document.querySelector('#scoreBarFull');
 
 let currentQuestion={}
 let acceptingAnswers = true
@@ -54,7 +55,7 @@ let questions = [
 ]
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+const MAX_QUESTIONS = 5
 
 startGame=()=>{
     questionCounter=0
@@ -64,19 +65,20 @@ startGame=()=>{
 }
 
 getNewQuestion=()=>{
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
+    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
         localStorage.setItem('mostRecentScore',score)
 
         return window.location.assign('/Quiz/end.html')
     }
 
     questionCounter++
-    progressText.innerText =` Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressText.innerText =` Question ${(questionCounter)} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS)*100}%`
-
-    scoreText.innerText =` Score ${questionCounter} of ${MAX_QUESTIONS}`
-    scoreBarFull.style.width = `${(questionCounter/MAX_QUESTIONS)*100}%`
-
+/* 
+    scoreText.innerText =` Score ${(score)} of ${(MAX_QUESTIONS*100)}`
+   
+    scoreBarFull.style.width = `${(score/(MAX_QUESTIONS*100))*100}%`
+*/
     const questionsIndex = Math.floor(Math.random()* availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
@@ -119,7 +121,7 @@ choices.forEach(choice =>{
 
 incrementScore = num =>{
     score +=num
-    scoreText.innerText = score
+    score.innerText = score
 }
 
 startGame()

@@ -1,5 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
 :root{
     background-color: rbg(29,26,26)
 }
@@ -100,4 +137,50 @@ h2{
 .fa-crown{
     font-size: 1.5rem;
     margin-left: 1rem;
+}
+
+/* End Start Page css */
+
+
+.end-form-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input{
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+
+}
+
+input::placeholder{
+    color: #aaa;
+}
+
+#username{
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text{
+    font-size: 2.4rem;
+    color: cornsilk;
+    text-align: center;
+}
+
+#saveScoreBtn{
+    border: none;
+}
+
+.fa-home{
+    margin-left: 1rem;
+    font-size: 2rem;
+  
 }

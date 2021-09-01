@@ -30,6 +30,30 @@ body{
     width: 90%;
 }
 
+.question-container{
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 90%;
+    border-radius: 8px;
+    background: #680202;
+    background: linear-gradient(90deg, rgb(15, 0, 0) 0%, rgb(247, 128, 112) 100%);
+    font-size: 3rem;
+    min-width: 70rem;
+}
+
+.question-prefix{
+    padding: 2rem 2.5rem;
+    color: cornsilk;
+
+}
+
+.question-text{
+    padding: 2rem;
+    width: 90%;
+    color: cornsilk;    
+}
+
+
 .correct{
     background: linear-gradient(32deg, rgba(11,223,36)0%, rgb(41,232,111)100%);
 }
@@ -54,19 +78,13 @@ body{
     margin-bottom: 1.8rem;
     width: 100%;
     border-radius: 8px;
-    background: rgb(75, 23, 2);
+   
     text-align: center;
     font-size: 3rem;
-    color: cornsilk;
+   
     padding: 2rem 2.5rem;    
 }
 
-.question-text{
-    text-align: center;
-    font-size: 3rem;
-    color: cornsilk;
-    padding: 2rem 2.5rem;
-}
 
 .hud-main-text{
     text-align: center;
