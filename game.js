@@ -11,48 +11,17 @@ let score = 0
 let questionCounter = 1
 let availableQuestions = []
 
-let questions = [
-    {
-        question: 'What is 2 + 2',
-        choice1: '3',
-        choice2: '2',
-        choice3: '4',
-        choice4: '8',
-        answer:3,
-    },
-    {
-        question: 'What is 2 + 2 + 1',
-        choice1: '3',
-        choice2: '6',
-        choice3: '5',
-        choice4: '8',
-        answer:3,
-    },
-    {
-        question: 'What is 2 / 2',
-        choice1: '8',
-        choice2: '2',
-        choice3: '4',
-        choice4: '1',
-        answer:4,
-    },
-    {
-        question: 'What is 2 - 2',
-        choice1: '0',
-        choice2: '2',
-        choice3: '4',
-        choice4: '8',
-        answer:1,
-    },
-    {
-        question: 'What is 2 x 2',
-        choice1: '3',
-        choice2: '2',
-        choice3: '4',
-        choice4: '8',
-        answer:3,
-    }
-]
+let questions = [];
+
+fetch('questions.json').then(res =>{
+    //console.log(res);
+    return res.json();
+}).then(loadedQuestions =>{
+
+    console.log(loadedQuestions);
+    questions = loadedQuestions;
+    startGame()
+});
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 5
@@ -68,14 +37,14 @@ getNewQuestion=()=>{
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
         localStorage.setItem('mostRecentScore',score)
 
-        return window.location.assign('/Quiz/end.html')
+        return window.location.assign('/Quiz - Loaded Questions/end.html')
     }
 
     questionCounter++
     progressText.innerText =` Question ${(questionCounter)} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS)*100}%`
 /* 
-    scoreText.innerText =` Score ${(score)} of ${(MAX_QUESTIONS*100)}`
+    scoreText.innerText =`Score ${(score)} of ${(MAX_QUESTIONS*100)}`
    
     scoreBarFull.style.width = `${(score/(MAX_QUESTIONS*100))*100}%`
 */
@@ -124,4 +93,3 @@ incrementScore = num =>{
     score.innerText = score
 }
 
-startGame()

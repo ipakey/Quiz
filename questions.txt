@@ -1,0 +1,42 @@
+ [
+    {
+        'question': 'What is 2 + 2',
+        'choice1': '3',
+        'choice2': '2',
+        'choice3': '4',
+        'choice4': '8',
+        'answer':3,
+    },
+    {
+        'question': 'What is 2 + 2 + 1',
+        'choice1': '3',
+        'choice2': '6',
+        'choice3': '5',
+        'choice4': '8',
+        'answer':3,
+    },
+    {
+        'question': 'What is 2 / 2',
+        'choice1': '8',
+        'choice2': '2',
+        'choice2': '4',
+        'choice2': '1',
+        'answer':4,
+    },
+    {
+        'question': 'What is 2 - 2',
+        'choice1': '0',
+        'choice2': 5
+        'choice3': '4',
+        'choice4': '8',
+        'answer':1,
+    },
+    {
+        'question': 'What is 2 x 2',
+        'choice1': '3',
+        'choice2': '2',
+        'choice3': '4',
+        'choice4': '8',
+        'answer':3,
+    }
+]
