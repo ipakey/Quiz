@@ -13,7 +13,7 @@ let availableQuestions = []
 
 let questions = [];
 
-fetch('questions.json').then(res =>{
+fetch('fives.json').then(res =>{
     //console.log(res);
     return res.json();
 }).then(loadedQuestions =>{
